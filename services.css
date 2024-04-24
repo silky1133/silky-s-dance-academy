@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Services - Silky Dance Academy</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            padding: 0;
+        }
+
+        #navbar {
+            background-color: rgb(144, 30, 175);
+            font-family: 'Yeon Sung';
+            padding: 13px 14px;
+            height: 50px;
+        }
+
+        #navbar ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #navbar li {
+            list-style: none;
+            padding-top: 10px;
+        }
+
+        #navbar li a {
+            text-decoration: none;
+            padding: 5px 20px;
+            color: white;
+        }
+
+        #navbar li a:hover {
+            color: white;
+            font-weight: bolder;
+        }
+
+        #logo {
+            display: flex;
+            color: white;
+            align-items: center;
+            margin: 5px 2px;
+            font-size: 10px;
+            margin-right: 140px;
+        }
+
+        #logo img {
+            height: 35px;
+            filter: invert(1);
+            margin-right: 10px;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <ul>
+            
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="classes.html">Class Info</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Our Services</h1>
+        <p>At Silky's Dance Academy, we offer a variety of services to meet the needs of our students. Whether you're looking to improve your technique, prepare for a performance, or simply enjoy dancing, we have something for everyone.</p>
+        <h2>Dance Classes</h2>
+        <p>We provide comprehensive dance classes in a variety of styles including ballet, jazz, tap, hip-hop, and contemporary. Our classes are suitable for all ages and skill levels, from beginners to advanced dancers.</p>
+        <h2>Private Lessons</h2>
+        <p>For personalized attention and accelerated progress, we offer private dance lessons tailored to your individual goals and needs. Whether you're preparing for a competition or just want to refine your skills, our experienced instructors will help you reach your full potential.</p>
+        <h2>Choreography</h2>
+        <p>Need a choreographer for your upcoming performance, event, or special occasion? Our talented choreographers are available to create custom routines that showcase your style and vision. From solo performances to group numbers, we'll bring your ideas to life.</p>
+        <h2>Dance Workshops</h2>
+        <p>Join us for dance workshops and intensives led by renowned guest instructors. These special events offer unique learning opportunities and inspiration for dancers of all levels. Stay tuned for upcoming workshops and unleash your creativity!</p>
+    </div>
+</body>
+</html>
