@@ -1,71 +1,57 @@
+/* Default styles */
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-/* utility classes--- */
-
-
-
+/* Navbar styles */
 #navbar::before {
     content: "";
     background-color: purple;
     position: absolute;
-
     z-index: -1;
     height: 100%;
     width: 100%;
     opacity: 0.5;
-
-
 }
 
 #navbar {
     position: relative;
-}
-#navbar{
     background-color: rgb(144, 30, 175);
-    font-family: 'Yeon Sung' ;
-    padding: 13px, 14px;
+    font-family: 'Yeon Sung';
+    padding: 13px 14px; /* Fixing padding syntax */
     height: 50px;
 }
-#navbar ul{
+
+#navbar ul {
     display: flex;
     flex-direction: row;
-     justify-content: center;
+    justify-content: center;
     align-items: center;
 }
-#navbar li{
+
+#navbar li {
     list-style: none;
     padding-top: 10px;
 }
-#navbar li a{ 
-   text-decoration: none;
+
+#navbar li a {
+    text-decoration: none;
     padding: 13px 20px;
     color: white;
-    
 }
 
-
-
-
-
-
-
-
- #navbar li a:hover{
-        color: white; 
-        font-weight: bolder; 
+#navbar li a:hover {
+    color: white;
+    font-weight: bolder;
 }
+
 a:active {
-    background-color: rgb(232, 55, 206)
+    background-color: rgb(232, 55, 206);
 }
 
-
-
-
-
+/* Welcome section styles */
 #welcome {
     display: flex;
     flex-direction: column;
@@ -74,7 +60,6 @@ a:active {
     height: 378px;
     font-size: 41px;
     font-weight: bold;
-
     color: #0c0b0b;
     position: relative;
 }
@@ -85,38 +70,36 @@ a:active {
     position: absolute;
     height: 130%;
     width: 100%;
-
     z-index: -1;
     opacity: 0.4;
 }
 
 #welcome #banner {
     font-size: 61px;
-    margin-top:70px;
-
-
-
+    margin-top: 70px;
 }
 
 #welcome img {
     transform: rotate(360deg);
-    height: 100px;
-    height: 192px;
+    height: 192px; /* Fixed height typo */
     margin-top: 44px;
-    position:relative;
-    animation-name:dancing;
-    animation-duration:4s;
-    animation-iteration-count:2;
-    animation-timing-function:ease-in-out;
-
+    position: relative;
+    animation-name: dancing;
+    animation-duration: 4s;
+    animation-iteration-count: 2;
+    animation-timing-function: ease-in-out;
 }
 
-@keyframes dancing{
-    from{transform:rotate(0deg);}
-    to{transform:rotate(360deg);}
+@keyframes dancing {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
-
+/* Mission section styles */
 #mission {
     display: flex;
     flex-direction: column;
@@ -124,26 +107,11 @@ a:active {
     align-items: center;
     padding: 8px;
     font-size: 27px;
-    margin-top: 57px
+    margin-top: 57px;
 }
-
-/* #mission>h1 {
-    transition-property:font-size;
-    transition-duration:1s;
-
-}
-#mission>h1:hover{
-     font-size:35px;
-
-} */
-
 
 #mission #layout {
-
-
-
     display: flex;
-
 }
 
 .card {
@@ -151,37 +119,29 @@ a:active {
     border-radius: 5px;
     width: 419px;
     height: 298px;
-    font-size: 10px;
+    font-size: 23px; /* Increased font size */
     margin: 18px;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: rgb(247, 238, 247);
-    transition-property:transform;
-    transition-duration:1s;
+    transition-property: transform;
+    transition-duration: 1s;
 }
 
-.card:hover{transform:scale(1.2); }
+.card:hover {
+    transform: scale(1.2);
+}
 
 .card h1 {
     font-size: 23px;
-    
 }
 
- /* .card h1:hover{
-     font-size:30px;      */
-
-
-
-/* } */
-
 .card div.container {
-    font-size: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-
     margin-top: 29px;
 }
 
@@ -199,37 +159,91 @@ a:active {
     padding-top: 60px;
 }
 
-#sponsor{display:flex;
-         flex-direction:column;
-         justify-content:center;
-         align-items:center;
-         background-color: #b6a2ca;
-             }
-#sponsor h1{ font-size:38px;
-              margin:10px; 
-              transition-property:font-size;
-              transition-duration:1s;
-          }
-          
-           #sponsor h1:hover{
-               font-size:30px;    }
-
-#logoimages{
-    display:flex;
-    justify-content:center;
-         align-items:center;
-    
+/* Sponsor section styles */
+#sponsor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #b6a2ca;
+    height: auto; /* Adjusted height */
 }
 
-#hp{width: 190px;
-    
-    margin: 13px;}
-#dell{width:189px;
-    margin: 36px;}
-#microsoft{width:329px;
-    margin: -26px;}
-#apple{width:216px;
-    margin: 24px;}
+#sponsor h1 {
+    font-size: 38px;
+    margin: 10px;
+    transition-property: font-size;
+    transition-duration: 1s;
+}
 
+#sponsor h1:hover {
+    font-size: 30px;
+}
 
-  
+#logoimages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hp {
+    width: 190px;
+    margin: 13px;
+}
+
+#dell {
+    width: 189px;
+    margin: 36px;
+}
+
+#microsoft {
+    width: 329px;
+    margin: -26px;
+}
+
+#apple {
+    width: 216px;
+    margin: 24px;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 1332px) {
+    #mission div#layout {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #dell {
+        width: 91px;
+        margin: 1px;
+    }
+
+    #hp {
+        width: 102px;
+        margin: 28px;
+    }
+
+    #apple {
+        width: 116px;
+        margin: 1px;
+    }
+
+    #microsoft {
+        width: 189px;
+        margin: 10px;
+    }
+
+    #welcome #banner {
+        font-size: 40px;
+        margin-top: 70px;
+    }
+
+    #welcome {
+        font-size: 35px;
+    }
+
+    /* Adjusting sponsor section height */
+    #sponsor {
+        flex-grow: 1;
+    }
+}
