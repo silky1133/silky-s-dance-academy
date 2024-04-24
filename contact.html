@@ -76,6 +76,48 @@
             font-size: 18px;
             color: #333;
         }
+
+        /* New CSS styles for form */
+        .contact-form {
+            width: 100%;
+            max-width: 600px; /* Set a max-width to prevent the form from stretching too wide */
+            margin-top: 20px;
+        }
+
+        .contact-form label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .contact-form textarea {
+            height: 150px; /* Set a fixed height for the textarea */
+        }
+
+        .contact-form input[type="submit"] {
+            background-color: rgb(144, 30, 175);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form input[type="submit"]:hover {
+            background-color: #ffd700; /* Change background color on hover */
+        }
     </style>
 </head>
 <body>
@@ -99,6 +141,19 @@
             <p>Address: 123 Silky Street, Cityville, State, Country</p>
         </div>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3075.8017604551395!2d-122.08390338466065!3d37.38607237983511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f80d68b09e331%3A0xf47ad59cfe4e42d7!2sSilicon%20Valley%2C%20CA%2C%20USA!5e0!3m2!1sen!2suk!4v1647930139733!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        
+        <!-- New Form -->
+        <h2>Connect with Us</h2>
+        <p>We value your feedback and inquiries. Please fill out the form below to get in touch with us.</p>
+        <form class="contact-form" action="#" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <input type="submit" value="Submit">
+        </form>
     </div>
 </body>
 </html>
