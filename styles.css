@@ -232,11 +232,4 @@ a:active {
     margin: 24px;}
 
 
-    footer{
-        background-color:black;
-        color:white;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        height:45px;
-    }
+  
