@@ -166,7 +166,6 @@ a:active {
     justify-content: center;
     align-items: center;
     background-color: #b6a2ca;
-    height: auto;
 }
 
 #sponsor h1 {
@@ -184,6 +183,7 @@ a:active {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 0; /* Added margin bottom */
 }
 
 #hp {
@@ -245,6 +245,14 @@ a:active {
     /* Adjusting sponsor section height */
     #sponsor {
         flex-grow: 1;
-        height : 70px ; /* Setting the height to 70px */
+        height: 70px;
+    }
+
+    /* Adding styles for logoimages within the media query */
+    #logoimages {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0; /* Added margin bottom */
     }
 }
