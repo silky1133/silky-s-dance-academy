@@ -50,9 +50,7 @@
             width: 80%;
             margin: auto;
             padding: 20px;
-            background-color: white;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
+            background-color: #f4f4f4;
         }
 
         h1 {
@@ -66,50 +64,36 @@
             transform: translateY(-3px); /* Move heading slightly up on hover */
         }
 
-        h2 {
-            color: rgb(100, 30, 175); /* Change heading color */
-            margin-top: 30px;
-            transition: all 0.3s ease;
-        }
-
-        h2:hover {
-            transform: scale(1.05); /* Increase size on hover */
-        }
-
-        p {
-            line-height: 1.6;
-            color: #333;
-        }
-
-        /* Add transition effect to cards */
         .card {
-            transition: transform 0.3s ease-in-out;
-        }
-
-        /* Add hover effect to cards */
-        .card:hover {
-            transform: scale(1.05);
-        }
-
-        /* Card styling */
-        .card {
-            width: 200px;
-            height: 200px;
-            background-color: white;
+            width: 250px;
+            height: 250px;
+            background: linear-gradient(135deg, #d3d3ff, #b3e0ff); /* Light gradient violet and blue */
             border-radius: 50%;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
+            margin: 0 auto 20px auto;
             overflow: hidden;
             position: relative;
             cursor: pointer;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card h2 {
+            color: #111; /* Very dark text color */
+            font-weight: bold; /* Bold text */
+            margin-bottom: 10px;
         }
 
         .card p {
-            margin-top: 10px;
+            color: #333; /* Dark text color */
         }
     </style>
 </head>
@@ -128,28 +112,28 @@
     <!-- Main Content -->
     <div class="container">
         <h1>Class Information</h1>
-        <h2>Ballet Class</h2>
         <div class="card">
+            <h2>Ballet Class</h2>
             <p>Schedule: Mondays and Wednesdays, 5:00 PM - 6:30 PM</p>
         </div>
 
-        <h2>Jazz Class</h2>
         <div class="card">
+            <h2>Jazz Class</h2>
             <p>Schedule: Tuesdays and Thursdays, 6:00 PM - 7:30 PM</p>
         </div>
 
-        <h2>Tap Class</h2>
         <div class="card">
+            <h2>Tap Class</h2>
             <p>Schedule: Wednesdays and Fridays, 4:00 PM - 5:30 PM</p>
         </div>
 
-        <h2>Hip Hop Class</h2>
         <div class="card">
+            <h2>Hip Hop Class</h2>
             <p>Schedule: Mondays and Thursdays, 7:00 PM - 8:30 PM</p>
         </div>
 
-        <h2>Contemporary Class</h2>
         <div class="card">
+            <h2>Contemporary Class</h2>
             <p>Schedule: Fridays and Saturdays, 5:00 PM - 6:30 PM</p>
         </div>
     </div>
