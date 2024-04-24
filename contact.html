@@ -1,20 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="contact.css">
+    <title>Contact - Silky Dance Academy</title>
     <style>
-        /* Common Styles */
         * {
             margin: 0;
             box-sizing: border-box;
+            padding: 0;
         }
 
         body {
             font-family: Arial, sans-serif;
-            background-color: #f7f7f7;
+            background-color: #f4f4f4;
         }
 
         #navbar {
@@ -52,63 +49,32 @@
         .container {
             width: 80%;
             margin: auto;
-            padding: 50px 0;
-            text-align: center;
-        }
-
-        h1 {
-            color: #4CAF50;
-            margin-bottom: 30px;
-        }
-
-        .myForm {
+            padding: 20px;
+            background-color: #f4f4f4;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        .myInput {
-            width: 100%;
-            max-width: 300px;
-            padding: 10px;
-            margin: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            outline: none;
-        }
-
-        .btn {
-            width: 100%;
-            max-width: 200px;
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease-in-out;
-        }
-
-        .btn:hover {
-            background-color: #45a049;
-        }
-
-        #footer {
-            background-color: #333;
-            color: white;
+        h1 {
             text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            margin-bottom: 20px;
+            color: rgb(100, 30, 175); /* Change heading color */
+            transition: all 0.3s ease;
         }
 
-        /* Media queries for responsiveness */
-        @media screen and (max-width: 768px) {
-            .myInput, .btn {
-                width: 100%;
-                max-width: none;
-            }
+        h1:hover {
+            transform: translateY(-3px); /* Move heading slightly up on hover */
+        }
+
+        .contact-info {
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #333;
         }
     </style>
 </head>
@@ -124,19 +90,15 @@
         </ul>
     </nav>
 
+    <!-- Main Content -->
     <div class="container">
         <h1>Contact Us</h1>
-        <form action="/Contact" method="post" class="myForm">
-            <input type="text" class="myInput" name="name" placeholder="Enter your name">
-            <input type="phone" class="myInput" name="phone" placeholder="Enter your phone number">
-            <input type="email" class="myInput" name="email" placeholder="Enter your email id">
-            <input type="text" class="myInput" name="address" placeholder="Enter your address">
-            <input type="text" class="myInput" name="desc" placeholder="Enter your concern">
-            <button class="btn">Submit</button>
-        </form>
+        <div class="contact-info">
+            <p>Email: info@silkydance.com</p>
+            <p>Phone: +1 (123) 456-7890</p>
+            <p>Address: 123 Silky Street, Cityville, State, Country</p>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3075.8017604551395!2d-122.08390338466065!3d37.38607237983511!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f80d68b09e331%3A0xf47ad59cfe4e42d7!2sSilicon%20Valley%2C%20CA%2C%20USA!5e0!3m2!1sen!2suk!4v1647930139733!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
-    <footer id="footer">
-        Copyright © 2024 SilkyDanceAcademy.com  All rights reserved
-    </footer>
 </body>
 </html>
