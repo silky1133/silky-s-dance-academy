@@ -245,5 +245,6 @@ a:active {
     /* Adjusting sponsor section height */
     #sponsor {
         flex-grow: 1;
+        margin-bottom: 0;
     }
 }
