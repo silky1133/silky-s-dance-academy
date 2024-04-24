@@ -17,6 +17,38 @@
             background-color: #f7f7f7;
         }
 
+        #navbar {
+            background-color: rgb(144, 30, 175);
+            font-family: 'Yeon Sung';
+            padding: 13px 14px;
+            height: 50px;
+            margin-bottom: 20px;
+        }
+
+        #navbar ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #navbar li {
+            list-style: none;
+            padding-top: 10px;
+        }
+
+        #navbar li a {
+            text-decoration: none;
+            padding: 5px 20px;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        #navbar li a:hover {
+            color: #ffd700; /* Change color on hover */
+            transform: translateY(-3px); /* Move link slightly up on hover */
+        }
+
         .container {
             width: 80%;
             margin: auto;
@@ -81,6 +113,17 @@
     </style>
 </head>
 <body>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="classes.html">Class Info</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
     <div class="container">
         <h1>Contact Us</h1>
         <form action="/Contact" method="post" class="myForm">
