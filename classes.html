@@ -68,12 +68,12 @@
         }
 
         .card {
-            width: 450px; /* Increased width */
-            height: 450px; /* Increased height */
+            width: 350px; /* Increased width */
+            height: 350px; /* Increased height */
             background: linear-gradient(135deg, #d3d3ff, #b3e0ff); /* Light gradient violet and blue */
             border-radius: 50%;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            margin: 70px; /* Increased margin */
+            margin: 30px; /* Increased margin */
             overflow: hidden;
             position: relative;
             cursor: pointer;
@@ -85,10 +85,12 @@
             transition: transform 0.3s ease-in-out;
         }
 
-        
-
         .card:hover {
             transform: scale(1.15); /* Enlarge on hover */
+        }
+
+        .pop-out {
+            animation: popUp 0.5s forwards;
         }
 
         @keyframes popUp {
@@ -99,28 +101,6 @@
                 transform: scale(1.15); /* Enlarged scale */
             }
         }
-
-        .card:nth-child(1) {
-            animation: popUp 0.5s forwards; /* Apply animation to the first card */
-            animation-delay: 0s; /* Delay animation for the first card */
-        }
-
-        .card:nth-child(2) {
-            animation: popUp 0.5s forwards; /* Apply animation to the second card */
-            animation-delay: 0.5s; /* Delay animation for the second card */
-        }
-
-        .card:nth-child(3) {
-            animation: popUp 0.5s forwards; /* Apply animation to the third card */
-            animation-delay: 1s; /* Delay animation for the third card */
-        }
-
-        .card:nth-child(4) {
-            animation: popUp 0.5s forwards; /* Apply animation to the fourth card */
-            animation-delay: 1.5s; /* Delay animation for the fourth card */
-        }
-
-       
     </style>
 </head>
 <body>
@@ -138,27 +118,43 @@
     <!-- Main Content -->
     <div class="container">
         <h1>Class Information</h1>
-        <div class="card">
+        <div class="card" id="card1">
             <h2>Ballet Class</h2>
             <p>Schedule: Mondays and Wednesdays, 5:00 PM - 6:30 PM</p>
         </div>
 
-        <div class="card">
+        <div class="card" id="card2">
             <h2>Jazz Class</h2>
             <p>Schedule: Tuesdays and Thursdays, 6:00 PM - 7:30 PM</p>
         </div>
 
-        <div class="card">
+        <div class="card" id="card3">
             <h2>Tap Class</h2>
             <p>Schedule: Wednesdays and Fridays, 4:00 PM - 5:30 PM</p>
         </div>
 
-        <div class="card">
+        <div class="card" id="card4">
             <h2>Hip Hop Class</h2>
             <p>Schedule: Mondays and Thursdays, 7:00 PM - 8:30 PM</p>
         </div>
-
-        
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cards = document.querySelectorAll(".card");
+
+            function animateCard(cardIndex) {
+                cards[cardIndex].classList.add("pop-out");
+                setTimeout(() => {
+                    cards[cardIndex].classList.remove("pop-out");
+                    if (cardIndex < cards.length - 1) {
+                        animateCard(cardIndex + 1);
+                    }
+                }, 500); // Adjust this value to match your CSS animation duration
+            }
+
+            animateCard(0);
+        });
+    </script>
 </body>
 </html>
