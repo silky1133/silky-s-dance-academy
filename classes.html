@@ -51,6 +51,9 @@
             margin: auto;
             padding: 20px;
             background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         h1 {
@@ -65,12 +68,12 @@
         }
 
         .card {
-            width: 250px;
-            height: 250px;
+            width: 200px;
+            height: 200px;
             background: linear-gradient(135deg, #d3d3ff, #b3e0ff); /* Light gradient violet and blue */
             border-radius: 50%;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            margin: 0 auto 20px auto;
+            margin: 20px 0;
             overflow: hidden;
             position: relative;
             cursor: pointer;
@@ -83,17 +86,41 @@
         }
 
         .card:hover {
-            transform: scale(1.05);
+            transform: scale(1.15); /* Enlarge on hover */
         }
 
-        .card h2 {
-            color: #111; /* Very dark text color */
-            font-weight: bold; /* Bold text */
-            margin-bottom: 10px;
+        @keyframes popUp {
+            0% {
+                transform: scale(1); /* Initial scale */
+            }
+            100% {
+                transform: scale(1.15); /* Enlarged scale */
+            }
         }
 
-        .card p {
-            color: #333; /* Dark text color */
+        .card:nth-child(1) {
+            animation: popUp 0.5s forwards; /* Apply animation to the first card */
+            animation-delay: 0s; /* Delay animation for the first card */
+        }
+
+        .card:nth-child(2) {
+            animation: popUp 0.5s forwards; /* Apply animation to the second card */
+            animation-delay: 0.5s; /* Delay animation for the second card */
+        }
+
+        .card:nth-child(3) {
+            animation: popUp 0.5s forwards; /* Apply animation to the third card */
+            animation-delay: 1s; /* Delay animation for the third card */
+        }
+
+        .card:nth-child(4) {
+            animation: popUp 0.5s forwards; /* Apply animation to the fourth card */
+            animation-delay: 1.5s; /* Delay animation for the fourth card */
+        }
+
+        .card:nth-child(5) {
+            animation: popUp 0.5s forwards; /* Apply animation to the fifth card */
+            animation-delay: 2s; /* Delay animation for the fifth card */
         }
     </style>
 </head>
@@ -137,6 +164,5 @@
             <p>Schedule: Fridays and Saturdays, 5:00 PM - 6:30 PM</p>
         </div>
     </div>
-
 </body>
 </html>
