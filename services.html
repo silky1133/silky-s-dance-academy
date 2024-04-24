@@ -81,29 +81,51 @@
             color: #333;
         }
 
-        /* Card styling */
-        .card {
-            width: 200px;
-            height: 200px;
-            background-color: white;
-            border-radius: 50%;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            overflow: hidden;
-            position: relative;
-            transition: transform 0.3s ease-in-out;
-            cursor: pointer;
+        /* Initially hide all elements with class "hidden" */
+        .hidden {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            visibility: hidden; /* Hide text while it's transitioning */
         }
 
-        .card:hover {
-            transform: scale(1.05);
+        /* Apply animation when element becomes visible */
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+            visibility: visible; /* Make text visible when it's done transitioning */
         }
 
-        .card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
+        /* Delay animations for each heading and paragraph */
+        h2:nth-child(1),
+        p:nth-child(2),
+        h2:nth-child(3),
+        p:nth-child(4),
+        h2:nth-child(5),
+        p:nth-child(6),
+        h2:nth-child(7),
+        p:nth-child(8) {
+            transition-delay: 0.5s;
+        }
+
+        h2:nth-child(1),
+        p:nth-child(2) {
+            transition-delay: 0.5s;
+        }
+
+        h2:nth-child(3),
+        p:nth-child(4) {
+            transition-delay: 1s;
+        }
+
+        h2:nth-child(5),
+        p:nth-child(6) {
+            transition-delay: 1.5s;
+        }
+
+        h2:nth-child(7),
+        p:nth-child(8) {
+            transition-delay: 2s;
         }
     </style>
 </head>
@@ -122,16 +144,31 @@
     <!-- Main Content -->
     <div class="container">
         <h1>Our Services</h1>
-        <p>At Silky's Dance Academy, we offer a variety of services to meet the needs of our students. Whether you're looking to improve your technique, prepare for a performance, or simply enjoy dancing, we have something for everyone.</p>
-        <h2>Dance Classes</h2>
-        <p>We provide comprehensive dance classes in a variety of styles including ballet, jazz, tap, hip-hop, and contemporary. Our classes are suitable for all ages and skill levels, from beginners to advanced dancers.</p>
-        <h2>Private Lessons</h2>
-        <p>For personalized attention and accelerated progress, we offer private dance lessons tailored to your individual goals and needs. Whether you're preparing for a competition or just want to refine your skills, our experienced instructors will help you reach your full potential.</p>
-        <h2>Choreography</h2>
-        <p>Need a choreographer for your upcoming performance, event, or special occasion? Our talented choreographers are available to create custom routines that showcase your style and vision. From solo performances to group numbers, we'll bring your ideas to life.</p>
-        <h2>Dance Workshops</h2>
-        <p>Join us for dance workshops and intensives led by renowned guest instructors. These special events offer unique learning opportunities and inspiration for dancers of all levels. Stay tuned for upcoming workshops and unleash your creativity!</p>
+        <h2 class="hidden">Dance Classes</h2>
+        <p class="hidden">We provide comprehensive dance classes in a variety of styles including ballet, jazz, tap, hip-hop, and contemporary. Our classes are suitable for all ages and skill levels, from beginners to advanced dancers.</p>
+        <h2 class="hidden">Private Lessons</h2>
+        <p class="hidden">For personalized attention and accelerated progress, we offer private dance lessons tailored to your individual goals and needs. Whether you're preparing for a competition or just want to refine your skills, our experienced instructors will help you reach your full potential.</p>
+        <h2 class="hidden">Choreography</h2>
+        <p class="hidden">Need a choreographer for your upcoming performance, event, or special occasion? Our talented choreographers are available to create custom routines that showcase your style and vision. From solo performances to group numbers, we'll bring your ideas to life.</p>
+        <h2 class="hidden">Dance Workshops</h2>
+        <p class="hidden">Join us for dance workshops and intensives led by renowned guest instructors. These special events offer unique learning opportunities and inspiration for dancers of all levels. Stay tuned for upcoming workshops and unleash your creativity!</p>
     </div>
 
+    <script>
+        // Add the "visible" class to make the elements visible after a delay
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get all elements with class "hidden"
+            var hiddenElements = document.querySelectorAll(".hidden");
+
+            // Loop through each hidden element
+            hiddenElements.forEach(function(element, index) {
+                // Add a delay to each element based on its index
+                setTimeout(function() {
+                    // Add class "visible" to make the element visible
+                    element.classList.add("visible");
+                }, index * 500); // Adjust the delay timing (in milliseconds) as needed
+            });
+        });
+    </script>
 </body>
 </html>
