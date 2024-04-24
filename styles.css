@@ -166,7 +166,7 @@ a:active {
     justify-content: center;
     align-items: center;
     background-color: #b6a2ca;
-    height: auto; /* Adjusted height */
+    
 }
 
 #sponsor h1 {
@@ -245,6 +245,6 @@ a:active {
     /* Adjusting sponsor section height */
     #sponsor {
         flex-grow: 1;
-        margin-bottom: 0;
+        margin-bottom: 0px;
     }
 }
