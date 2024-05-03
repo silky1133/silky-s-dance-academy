@@ -42,8 +42,8 @@
         }
 
         #navbar li a:hover {
-            color: #ffd700; /* Change color on hover */
-            transform: translateY(-3px); /* Move link slightly up on hover */
+            color: #ffd700; 
+            transform: translateY(-3px); 
         }
 
         .container {
@@ -58,22 +58,22 @@
         h1 {
             text-align: center;
             margin-bottom: 20px;
-            color: rgb(100, 30, 175); /* Change heading color */
+            color: rgb(100, 30, 175); 
             transition: all 0.3s ease;
         }
 
         h1:hover {
-            transform: translateY(-3px); /* Move heading slightly up on hover */
+            transform: translateY(-3px); 
         }
 
         h2 {
-            color: rgb(100, 30, 175); /* Change heading color */
+            color: rgb(100, 30, 175); 
             margin-top: 30px;
             transition: all 0.3s ease;
         }
 
         h2:hover {
-            transform: scale(1.05); /* Increase size on hover */
+            transform: scale(1.05); 
         }
 
         p {
@@ -81,56 +81,27 @@
             color: #333;
         }
 
-        /* Initially hide all elements with class "hidden" */
+        
         .hidden {
             opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
-            visibility: hidden; /* Hide text while it's transitioning */
+            visibility: hidden; 
         }
 
-        /* Apply animation when element becomes visible */
+        
         .visible {
             opacity: 1;
-            transform: translateY(0);
-            visibility: visible; /* Make text visible when it's done transitioning */
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            visibility: visible; 
         }
 
-        /* Delay animations for each heading and paragraph */
-        h2:nth-child(1),
-        p:nth-child(2),
-        h2:nth-child(3),
-        p:nth-child(4),
-        h2:nth-child(5),
-        p:nth-child(6),
-        h2:nth-child(7),
-        p:nth-child(8) {
-            transition-delay: 0.5s;
-        }
+        
+        
 
-        h2:nth-child(1),
-        p:nth-child(2) {
-            transition-delay: 0.5s;
-        }
-
-        h2:nth-child(3),
-        p:nth-child(4) {
-            transition-delay: 1s;
-        }
-
-        h2:nth-child(5),
-        p:nth-child(6) {
-            transition-delay: 1.5s;
-        }
-
-        h2:nth-child(7),
-        p:nth-child(8) {
-            transition-delay: 2s;
-        }
     </style>
 </head>
 <body>
-    <!-- Navbar -->
+    
     <nav id="navbar">
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -141,7 +112,7 @@
         </ul>
     </nav>
 
-    <!-- Main Content -->
+    
     <div class="container">
         <h1>Our Services</h1>
         <h2 class="hidden">Dance Classes</h2>
@@ -159,18 +130,18 @@
 
 
     <script>
-        // Add the "visible" class to make the elements visible after a delay
+       
         document.addEventListener("DOMContentLoaded", function() {
-            // Get all elements with class "hidden"
+            
             var hiddenElements = document.querySelectorAll(".hidden");
 
-            // Loop through each hidden element
+            
             hiddenElements.forEach(function(element, index) {
-                // Add a delay to each element based on its index
+                
                 setTimeout(function() {
-                    // Add class "visible" to make the element visible
+                    
                     element.classList.add("visible");
-                }, index * 500); // Adjust the delay timing (in milliseconds) as needed
+                }, index * 500); 
             });
         });
     </script>
