@@ -42,8 +42,8 @@
         }
 
         #navbar li a:hover {
-            color: #ffd700; /* Change color on hover */
-            transform: translateY(-3px); /* Move link slightly up on hover */
+            color: #ffd700; 
+            transform: translateY(-3px); 
         }
 
         .container {
@@ -59,21 +59,21 @@
         h1 {
             text-align: center;
             margin-bottom: 20px;
-            color: rgb(100, 30, 175); /* Change heading color */
+            color: rgb(100, 30, 175); 
             transition: all 0.3s ease;
         }
 
         h1:hover {
-            transform: translateY(-3px); /* Move heading slightly up on hover */
+            transform: translateY(-3px);
         }
 
         .card {
-            width: 350px; /* Increased width */
-            height: 350px; /* Increased height */
-            background: linear-gradient(135deg, #d3d3ff, #b3e0ff); /* Light gradient violet and blue */
+            width: 350px; 
+            height: 350px; 
+            background: linear-gradient(135deg, #d3d3ff, #b3e0ff);
             border-radius: 50%;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            margin: 30px; /* Increased margin */
+            margin: 30px; 
             overflow: hidden;
             position: relative;
             cursor: pointer;
@@ -86,7 +86,7 @@
         }
 
         .card:hover {
-            transform: scale(1.15); /* Enlarge on hover */
+            transform: scale(1.15); 
         }
 
         .pop-out {
@@ -95,10 +95,10 @@
 
         @keyframes popUp {
             0% {
-                transform: scale(1); /* Initial scale */
+                transform: scale(1);
             }
             100% {
-                transform: scale(1.15); /* Enlarged scale */
+                transform: scale(1.15); 
             }
         }
     </style>
@@ -115,7 +115,7 @@
         </ul>
     </nav>
 
-    <!-- Main Content -->
+    
     <div class="container">
         <h1>Class Information</h1>
         <div class="card" id="card1">
@@ -154,7 +154,7 @@
                     if (cardIndex < cards.length - 1) {
                         animateCard(cardIndex + 1);
                     }
-                }, 500); // Adjust this value to match your CSS animation duration
+                }, 500); 
             }
 
             animateCard(0);
