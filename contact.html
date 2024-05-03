@@ -108,25 +108,13 @@
             padding: 10px 20px;
             cursor: pointer;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
+           
         }
 
         .contact-form input[type="submit"]:hover {
             background-color: #ffd700; 
         }
 
-        footer {
-            background-color: black;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 45px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            z-index: 999;
-        }
     </style>
 </head>
 <body>
@@ -164,20 +152,21 @@
             <input type="submit" value="Submit" id="submitBtn">
         </form>
     </div>
-    <footer>
+    <footer style="background-color:black; color:white; display:flex; align-items:center; justify-content:center; height:45px; position:fixed; bottom:0; width:100%;">
         Copyright &copy; RDA | All Rights Reserved
     </footer>
+    
 
     <script>
         function submitForm(event) {
             event.preventDefault(); 
 
-            // Clear form fields
+            
             document.getElementById("name").value = "";
             document.getElementById("email").value = "";
             document.getElementById("message").value = "";
 
-            // Show submission message
+            
             alert("The form has been submitted");
         }
     </script>
